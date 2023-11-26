@@ -15,7 +15,7 @@
 
 
     <!-- User Input for the value of A -->
-    <label for="number">Enter the number:</label>
+    <label for="number">Enter the value for (A):</label>
     <input type="number" id="number" step="any"><br>
 
 
@@ -34,11 +34,9 @@
     <p id="result2"></p>
 
 
-
-
     <script>
         function calculateLogarithm() {
-            // Get user input
+            // Gets the user input
             const number = parseFloat(document.getElementById("number").value);
             const base = parseFloat(document.getElementById("base").value);
 
@@ -48,7 +46,7 @@
                 return;
             }
 
-            // Calculate the logarithms
+            // Calculates the logarithms
             const logarithmByExponentiation = Math.pow(base, number);
             const logarithmByLog = Math.log(number) / Math.log(base);
 
