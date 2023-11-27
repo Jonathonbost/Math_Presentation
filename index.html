@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logarithm Calculator</title>
     <link rel="stylesheet" href="styles.css">
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
-
+<div class="main">
 <!-- this is the page title -->
 
     <h2>Logarithm Calculator</h2>
@@ -20,7 +21,7 @@
 
 
     <!-- User input for the value of B -->
-    <label for="base">Enter the base (b):</label>
+    <label for="base">Enter the base (B):</label>
     <input type="number" id="base" step="any"><br>
 
 
@@ -32,6 +33,83 @@
     <h3>Results:</h3>
     <p id="result1"></p>
     <p id="result2"></p>
+</div>
+    <div class="makemobile">
+        <p>
+
+            this is the page title
+<br />
+
+            &lth2>Logarithm Calculator&lt/h2&gt
+            <br />
+            <br />
+
+            User Input for the value of A <br />
+            &ltlabel for="number"&gtEnter the value for (A):&lt/label&gt<br />
+            &ltinput type="number" id="number" 
+            step="any"&gt<br>
+            <br />
+        
+        
+            input for the value of B <br />
+            &ltlabel for="base"&gtEnter the base (B):&lt/label&gt
+            <br />
+            &ltinput type="number" id="base" step="any"&gt
+            <br />
+            <br />
+        
+        
+           This button calls a custom javascript function named calculateLogarithm<br />
+            &ltbutton onclick="calculateLogarithm()"&gtCalculate Logarithm&lt/button&gt
+            <br />
+        
+            <br />
+            This area display the results of the custom function Named "calculateLogarithm" <br />
+            &lth3&gtResults:&lt/h3&gt
+            <br />
+            <br />
+            &ltp id="result1"&gt&lt/p&gt
+            <br />
+            <br />
+            &ltp id="result2"&gt&lt/p&gt
+
+            <br /><br />
+
+            
+            Function calculateLogarithm() {
+                <br />
+                <br />
+            Gets the user input
+            <br />
+            <br />
+            const number = parseFloat(document.getElementById("number").value);
+            <br /><br />
+            const base = parseFloat(document.getElementById("base").value);
+<br />
+<br />
+<br />
+            Check if the input is valid
+            <br />
+            if (isNaN(number) || isNaN(base)) {
+                alert("Please enter valid numbers for both the number and the base.");
+                return;
+            }
+            <br />
+            <br />
+            <br />
+            Calculates the logarithms
+            <br />
+            const logarithmByExponentiation = Math.pow(base, number);
+            const logarithmByLog = Math.log(number) / Math.log(base);
+            <br /><br /><br />
+
+            // Display the results
+            <br />
+            document.getElementById("result1").innerHTML = `&ltstrong&gt${base}&ltsup&gt${logarithmByLog.toFixed(4)}&lt/sup&gt&lt/strong&gt = ${number}`;<br /><br />
+            document.getElementById("result2").innerHTML = `&ltstrong&gtlog&ltsub&gt${base}&lt/sub&gt(${number})&lt/strong&gt = ${logarithmByLog.toFixed(4)}`;
+        }
+    </p>
+    </div>
 
 
     <script>
