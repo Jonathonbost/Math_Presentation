@@ -21,7 +21,7 @@ body {
             padding: 0;
             background-color: #121212;
             color: #fff;
-            height: 100vh;
+            height: 50vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -71,18 +71,16 @@ body {
 
 
         .makemobile p {
-            
-            display: flex;
-            text-align: center;
-            font-size: 15px;
-            margin: 20px;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            text-wrap: wrap;
-            padding: 10px;
-            text-align: center;
-            color:white;
-            margin-top: -200px;
-            text-overflow: ellipsis;
+            padding: 8px;
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            color:white
         }
+
+        @media all and (min-width: 50px)   {  body  { font-size:0.1em;  } }
+@media all and (min-width: 100px)  {  body  { font-size:0.2em;  } }
+@media all and (min-width: 200px)  {  body  { font-size:0.4em;  } }
+@media all and (min-width: 300px)  {  body  { font-size:0.6em;  } }
+@media all and (min-width: 400px)  {  body  { font-size:0.8em;  } }
+@media all and (min-width: 500px)  {  body  { font-size:1.0em;  } }
+
